@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Orignal Audio Track",
+  "version": "0.1",
+  "description": "Automatically set YouTube audio tracks to orignal",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["*://www.youtube.com/shorts/*"],
+      "js": ["content-shorts.js"]
+    }
+  ]
+}
